@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_126f3a0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.7.0">
+  <decision id="selectOffer" name="Подобрать предложение">
+    <decisionTable id="DecisionTable_09dtdol" hitPolicy="FIRST">
+      <input id="Input_1" label="countryCode" camunda:inputVariable="countryCode">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>customer.countryCode</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_113lane" label="amount" camunda:inputVariable="amount">
+        <inputExpression id="LiteralExpression_0jfn6mc" typeRef="double">
+          <text>customer.amount</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="isPersonal" name="isPersonal" typeRef="boolean" />
+      <output id="OutputClause_1sr6kjg" label="dish" name="dish" typeRef="string" />
+      <rule id="DecisionRule_16mwuc2">
+        <inputEntry id="UnaryTests_00gyvua">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1z0fgkz">
+          <text>&gt;500</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lz3oqm">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w4rdl5">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04boc38">
+        <inputEntry id="UnaryTests_0bv32lc">
+          <text>"US"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dse9fk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mtcvjl">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19oit64">
+          <text>"steak"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_185mv5o">
+        <inputEntry id="UnaryTests_0z6tnbr">
+          <text>"BY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eo5aod">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o05glt">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hrqr4f">
+          <text>"potato"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19bwft9">
+        <inputEntry id="UnaryTests_1rsxsle">
+          <text>"RU"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sbtxv1">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17ovepv">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gwmlze">
+          <text>"soup"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mwtklm">
+        <inputEntry id="UnaryTests_1seoxw0">
+          <text>"JP"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07u3p6f">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pv0q1t">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dvd94b">
+          <text>"sushi"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nzc4up">
+        <inputEntry id="UnaryTests_0e0wamu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_062wthq">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0k0wvug">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zs665r">
+          <text>"sandwich"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="selectOffer">
+        <dc:Bounds height="80" width="180" x="200" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

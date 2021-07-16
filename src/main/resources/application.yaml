@@ -1,0 +1,12 @@
+spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+
+camunda.bpm.admin-user:
+  id: demo
+  password: demo
+
+camunda:
+  bpm:
+    default-serialization-format: "application/json"
+application:
+  url: "https://demo.reunico.com/faker/api/generate?property=name.findName&property=name.title&property=random.number&property=finance.amount&property=address.countryCode&locale=ru"
+  orderUrl: "https://storage.yandexcloud.net/vedro-crm"
