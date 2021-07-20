@@ -1,6 +1,6 @@
 package com.reunico.training.constant;
 
-public interface ProcessVariables {
+public interface ProcessVariableConstants {
     String CUSTOMER = "customer";
     String DISH = "dish";
     String CUSTOMER_NAME = "customerName";

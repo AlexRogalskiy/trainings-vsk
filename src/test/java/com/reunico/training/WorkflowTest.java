@@ -1,6 +1,6 @@
 package com.reunico.training;
 
-import com.reunico.training.constant.ProcessVariables;
+import com.reunico.training.constant.ProcessVariableConstants;
 import com.reunico.training.model.Customer;
 import com.reunico.training.service.OrderService;
 import com.reunico.training.service.PublicService;
@@ -71,7 +71,7 @@ public class WorkflowTest extends AbstractProcessEngineRuleTest {
 
     // when
     ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(
-            processDefinitionKey, withVariables(ProcessVariables.CUSTOMER_ID, 123L)
+            processDefinitionKey, withVariables(ProcessVariableConstants.CUSTOMER_ID, 123L)
     );
 
     // then
